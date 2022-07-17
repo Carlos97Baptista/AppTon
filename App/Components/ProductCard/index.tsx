@@ -18,10 +18,10 @@ const ProductCard = (props: CardInterface) => {
 
   return (
     <Card style={{elevation: 5}}>
-      <Img source={item.img} />
+      <Img source={{uri: item.img}} />
       <ContainerCard>
         <TitleCard>{item.title}</TitleCard>
-        <MoneyCard>{item.value}</MoneyCard>
+        <MoneyCard>Área: {item.value}</MoneyCard>
       </ContainerCard>
       <BtnCard onPress={fnc} added={HaveInArray(item)}>
         <BtnTxt style={{color: '#FFF'}}>

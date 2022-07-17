@@ -13,18 +13,19 @@ export const ProductContext = createContext<ProductInterface>({ cart: [], manege
 export const ProductProvider = (props: any) => {
     const [cart, setCart] = useState<Array<object>>([]);
     const HaveInArray = (val:any) => {
-        let index = cart.indexOf(val)
+        let index = cart.findIndex(value => value.title == val.title)
         return (index > -1)
     }
     const manegeCart = (val: any) =>{
         let arr = [...cart];
-        let index = arr.indexOf(val);
+        let index = arr.findIndex(value => value.title == val.title);
+        console.log(index,arr,val)
         if(index == -1){
             arr.push(val)
         }else{
             arr.splice(index,1)
         }
-        setCart([...arr]);
+        setCart(arr);
     }
     return (
         <ProductContext.Provider value= {{ cart, manegeCart, HaveInArray }}>
