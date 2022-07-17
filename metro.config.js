@@ -6,6 +6,7 @@
  */
 
 module.exports = {
+  types: ["jest", "styled-components-react-native"],
   transformer: {
     getTransformOptions: async () => ({
       transform: {
