@@ -1,3 +1,4 @@
 react navigation
 styled components
 axios
+fortawesome
