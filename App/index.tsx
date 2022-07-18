@@ -1,11 +1,10 @@
-import React, {useEffect, type PropsWithChildren} from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
-import {NavigationContainer, useNavigation} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {ShoppingCart, ProductList} from './Screens';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React from 'react';
+import { ProductList, ShoppingCart } from './Screens';
 
-import { ProductProvider } from './Context/Product';
 import { CardIcon } from './Components';
+import { ProductProvider } from './Context/Product';
 
 
 

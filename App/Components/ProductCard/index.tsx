@@ -1,8 +1,8 @@
 import React from 'react';
-import {Dimensions} from 'react-native';
+import { Dimensions } from 'react-native';
 import styled from 'styled-components/native';
-import {useProduct} from '../../Context/Product';
-export interface CardObject {img: number; title: string; value: string}
+import { useProduct } from '../../Context/Product';
+export interface CardObject {img: string; title: string; value: string}
 
 export interface CardInterface {
   item:CardObject;
@@ -13,9 +13,6 @@ const widthSimention = Dimensions.get('window').width;
 const ProductCard = (props: CardInterface) => {
   const {HaveInArray} = useProduct();
   const {item, fnc} = props;
-
-  const added = false;
-
   return (
     <Card style={{elevation: 5}}>
       <Img source={{uri: item.img}} />

@@ -1,33 +1,9 @@
-import React, {useEffect, useState, type PropsWithChildren} from 'react';
-import {View, Text, FlatList} from 'react-native';
-import {ProductCard} from '../../Components';
-import image from '../../Assets/img/maquina.jpg';
-import {CardObject} from '../../Components/ProductCard';
+import React, { useEffect, useState } from 'react';
+import { FlatList, View } from 'react-native';
+import { ProductCard } from '../../Components';
+import { CardObject } from '../../Components/ProductCard';
 import { useProduct } from '../../Context/Product';
 import api from '../../Utils/api';
-import { faLungs } from '@fortawesome/free-solid-svg-icons';
-const list: CardObject[] = [
-  {
-    img: image,
-    title: 'maquininha 1',
-    value: '2.500,00',
-  },
-  {
-    img: image,
-    title: 'maquininha 2',
-    value: '2.800,00',
-  },
-  {
-    img: image,
-    title: 'maquininha 3',
-    value: '2.500,00',
-  },
-  {
-    img: image,
-    title: 'maquininha 4',
-    value: '2.800,00',
-  },
-];
 
 const ProductList = () => {
 const [country, setCountry] = useState([])

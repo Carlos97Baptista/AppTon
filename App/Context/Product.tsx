@@ -1,4 +1,4 @@
-import React, { createContext, useState,useContext } from "react";
+import React, { createContext, useContext, useState } from "react";
 
 
 interface ProductInterface {
@@ -19,7 +19,6 @@ export const ProductProvider = (props: any) => {
     const manegeCart = (val: any) =>{
         let arr = [...cart];
         let index = arr.findIndex(value => value.title == val.title);
-        console.log(index,arr,val)
         if(index == -1){
             arr.push(val)
         }else{

@@ -1,7 +1,5 @@
-import React, {type PropsWithChildren} from 'react';
-import { View, Text, FlatList } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React from 'react';
+import { FlatList, View } from 'react-native';
 import { HorizontalCard } from '../../Components';
 import { useProduct } from '../../Context/Product';
 const ShoppingCart = () => {

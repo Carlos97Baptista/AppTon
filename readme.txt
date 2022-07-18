@@ -1,2 +1,3 @@
 react navigation
 styled components
+axios

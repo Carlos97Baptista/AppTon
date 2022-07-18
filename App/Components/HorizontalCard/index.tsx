@@ -1,7 +1,6 @@
 import React from 'react';
-import {Dimensions} from 'react-native';
+import { Dimensions } from 'react-native';
 import styled from 'styled-components/native';
-import {useProduct} from '../../Context/Product';
 export interface CardObject {img: string; title: string; value: string}
 
 export interface CardInterface {
@@ -11,7 +10,7 @@ export interface CardInterface {
 
 const widthSimention = Dimensions.get('window').width;
 const HorizontalCard = (props: CardInterface) => {
-  const {HaveInArray} = useProduct();
+
   const {item, fnc} = props;
 
   return (
@@ -21,9 +20,9 @@ const HorizontalCard = (props: CardInterface) => {
         <TitleCard>{item.title}</TitleCard>
         <MoneyCard>{item.value}</MoneyCard>
       </ContainerCard>
-      <BtnCard onPress={fnc} added={HaveInArray(item)}>
+      <BtnCard onPress={fnc} >
         <BtnTxt style={{color: '#FFF'}}>
-          {HaveInArray(item) ? 'Remover' : 'Adicionar'}
+         Remover
         </BtnTxt>
       </BtnCard>
     </Card>
@@ -59,8 +58,7 @@ const BtnCard = styled.TouchableOpacity`
   padding: ${widthSimention * 0.01}px;
   width: 25%;
   height: 100%;
-  background-color: ${(props: {added: boolean}) =>
-    props.added ? '#d9534f' : '#5CEEA8'};
+  background-color: #d9534f;
   justify-content: center;
   align-items: center;
 `;

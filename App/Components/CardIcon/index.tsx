@@ -1,15 +1,14 @@
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { Dimensions, TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
 import { useProduct } from '../../Context/Product';
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {faCartShopping} from '@fortawesome/free-solid-svg-icons';
-import { useNavigation } from '@react-navigation/native';
-const widthSimention = Dimensions.get('window').width;
 
 const CardIcon = () => {
     const navigation = useNavigation()
-    const {cart, getCount} = useProduct();
+    const {cart} = useProduct();
 
   return (
     <TouchableOpacity onPress={()=> navigation.navigate("Cart")}>
